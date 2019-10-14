@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <p>iteration</p>
+        <p id="demo"></p>
+
+        <script>
+       /* var studentmarks = [45, 5, 12, 32, 60]
+        var newstudentmarks = studentmarks.map(function(mark){
+            return mark += 10;
+        });
+        document.getElementById("demo").innerHTML = newstudentmarks;
+        var numbers = [54, 34, 66,5, 11];
+        var over18 = numbers.filter(myFunction);
+        document.getElementById("demo").innerHTML = over18;
+        function myFunction(value,index, array){
+            return value > 40 
+        }*/
+        var numbers = [45,32, 14, 5, 8, 23]
+        var sum = numbers.reduce(myFunction);
+        document.getElementById("demo").innerHTML = sum;
+        function myFunction(total, value, index,array){
+            return total + value;
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+            <style>
+              body {
+            margin-left:40px;
+            margin-top: 40px;
+        }
+        .form-control{
+            width: 40%;
+        }
+       
+            </style>
+        
+    </head>
+    <body>
+        <form>
+            <label>Name:</label><br>
+            <input type="text" id="name" class="form-control"><br>
+            <label>Comments</label><br>
+            <textarea name="newcom" cols="20" rows="4" id="newcom" class="form-control"></textarea>
+            <br/>
+            <input type="button" value="Submit" onclick="details()" />
+            <div id="alert"></div>
+        </form>
+
+        <script>
+            
+            /*var Comments = ["goat","sheep","hen","dog","lion"];
+            for(let i of Comments) {
+                document.getElementById('alert').innerHTML += i+ "<br/>";
+            }*/
+            let Comments = [];
+            
+
+            function details () {
+                document.getElementById('alert').innerHTML = "";
+                let usercomment = document.getElementById("newcom").value;
+                let username = document.getElementById('name').value;
+
+                Comments.push({
+                    name:username,
+                    comment:usercomment
+                });             
+                for(let i in Comments) {
+                    document.getElementById('alert').innerHTML += Comments[i].name+ ": "+  Comments[i].comment + "<br/>";
+                }
+                document.getElementById("newcom").value = "";
+                document.getElementById("name").value = "";
+            }
+            /*var person = document.getElementById('name').value;
+            person.push(variable);
+            for(let i of Comments){
+                document.getElementById('name').innerHTML += name + i+ "<br/>";
+            }*/
+
+            /*document.getElementById("demo").innerHTML =
+            person["firstName"] + " " + person["lastName"];*/
+        </script>
+    </body>
+</html>

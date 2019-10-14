@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <table style="width: 600px;" id="display"></table>
+
+        <script>
+        const display = document.getElementById("display");
+        for (var i = 1; i <= 12; i++)        
+        {
+        display.innerHTML += `
+        <tr>
+            <td>`+ i +` </td>
+            <td>`+ i*2 +` </td>
+            <td>`+ i*3 +` </td>
+            <td>`+ i*4 +` </td>
+            <td>`+ i*5 +` </td>
+            <td>`+ i*6 +` </td>
+            <td>`+ i*7 +` </td>
+            <td>`+ i*8 +` </td>
+            <td>`+ i*9 +` </td>
+            <td>`+ i*10 +` </td>
+            <td>`+ i*11 +` </td>
+            <td>`+ i*12 +` </td>
+        </tr>
+        `;
+        }
+        </script>
+
+    </body>
+</html>

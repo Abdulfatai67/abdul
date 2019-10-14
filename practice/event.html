@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        .form-control {
+            width:40%;
+        }
+        body {
+            margin-left:40px;
+        }
+    </style>
+    <body>
+        <h3>How many products do you want to calculate</h3>
+        <input type="text" id="name" class="form-control"><br/>
+        <button class="btn btn-primary" id="check">Go</button>
+        <div id="printout"></div>
+        <div class="row"><br>
+            <div class="col-md-3"><select type="text" id="item1" class="form-control">
+                    <option>Item1</option>
+                    <option>Item2</option>
+                    <option>Item3</option>
+                    <option>Item4</option>
+            </div>
+        </div>
+            
+            
+          
+
+        
+    </body>
+    <script>
+            const item1 = 300;
+            const item2 = 145;
+            const item3 = 220;
+            const item4 = 500;
+            const item1Input = document.getElementById("item1");
+            const checkButton = document.getElementById("check");
+            const printoutDiv = document.getElementById("printout");
+            checkButton.addEventListener('click', () => {
+            let total = (item1Input.value * price1);
+           
+            </script>
+</html>

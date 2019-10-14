@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Grades</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+        <style>
+            #score {
+                width:30%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Check Grade</h2>
+            <input type="number" id="score" class="form-control"><br/>
+            <button class="btn btn-primary" id="check">Check</button><br/>
+            <span id="shower"></span>
+        </div>
+
+        <script>
+            const scoreField = document.getElementById('score');
+            const checkButton = document.getElementById('check');
+
+            checkButton.addEventListener('click',() => {
+                document.getElementById('shower').textContent = scoreField.value;
+               
+                let num = scoreField.value;
+
+                if(num < 40)
+                    alert("Failed");
+                else if(num >= 40 && num < 45) 
+                    alert("fair");
+                else if(num >= 45 && num < 50) 
+                    alert("pass");
+                else if(num >= 50 && num < 60) 
+                    alert("good");
+                else if(num >= 60 && num < 70) 
+                    alert("very good");
+                else 
+                    alert("excellent");
+                
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        .form-control {
+            width:40%;
+        }
+        body {
+            margin-left:40px;
+        }
+    </style>
+    <body>
+        <h3>Name Printer</h3>
+        <input type="text" id="name" class="form-control"><br/>
+        <button class="btn btn-primary" id="check">Check</button>
+        <div id="printout"></div>
+    </body>
+    <script>
+        const nameInput = document.getElementById('name');
+        const checkButton = document.getElementById('check');
+        const printoutDiv = document.getElementById('printout');
+        
+        checkButton.addEventListener('click', ()=> {
+            printoutDiv.textContent = "You are welcomed "+ nameInput.value;
+        });
+    </script>
+</html>

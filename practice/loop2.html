@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loop2</title>
+    </head>
+    <body>
+        <div id="display"></div>
+        <script>
+        const display = document.getElementById('display')
+       
+        names = ["MJ", "Haram", "Buhari", "Joshua", "Fatai"];
+        for( let i = 0; i < names.length; i++){
+            console.log(names[i]);
+            //display.innerHTML += names[i];
+        }
+
+        for(let i in names) {
+            console.log(names[i]);
+        }
+       
+        </script>
+    </body>
+</html>

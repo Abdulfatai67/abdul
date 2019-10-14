@@ -1,0 +1,60 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>event1</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+            body {
+                margin-left:40px;
+            }
+        </style>
+</head>
+<body>
+            <div class="row">
+            <div class="col-md-3">
+            <label>Name:</label><br>
+                <input type="text" id="name" class="form-control"><br>
+                <label>Discipline:</label><br>
+                <input type="text" id="disc" class="form-control"><br>
+                <label>Age<br></label>
+                <input type="text" id="age" class="form-control"><br>
+                <label> Gender<br></label>
+                <select type="text" id="gender" class="form-control">
+                    <option></option>
+                    <option value="Male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <button class="btn btn-primary" id="save">Save</button>
+                <button class="btn btn-primary" id="show">Show</button>
+                    
+            </div>
+            </div>
+</body>
+    <script>
+        const nameInput = document.getElementById("name"); 
+        const discInput = document.getElementById("disc"); 
+        const ageInput = document.getElementById("age");
+        const genderInput = document.getElementById("gender");
+        const saveButton = document.getElementById("save");
+        const showButton = document.getElementById("show");
+       
+        let people = [];
+
+        saveButton.addEventListener("click", () => {
+            
+            people.push({
+                name: nameInput.value,
+                disc: discInput.value,
+                age: ageInput.value,
+                gender: genderInput.value
+            });
+            console.log(people);
+        });
+        
+        //showButton.addEventListener('click', () =>{
+
+
+        //})
+
+    </script>
+</html>

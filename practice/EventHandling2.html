@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        .form-control {
+            width:50%;
+        }
+        body {
+            margin-left:40px;
+        }
+        .row {
+            margin-bottom: 5px;
+        }
+    </style>
+    <body>
+        <h3>Salary Checker</h3>
+        <div class="row">
+            <div class="col-md-1">Item 1</div>
+            <div class="col-md-4">
+                <input type="text" id="item1" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1">Item 2</div>
+            <div class="col-md-4">
+                <input type="text" id="item2" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1">Item 3</div>
+            <div class="col-md-4">
+                <input type="text" id="item3" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-1">Item 4</div>
+            <div class="col-md-4">
+                <input type="text" id="item4" class="form-control">
+            </div>
+        </div>
+        <br/>
+        <button class="btn btn-primary" id="check">Check</button><br/>
+        <div id="printout"></div>
+    </body>
+    <script>
+        const price1 = 239.99;
+        const price2 = 129.75;
+        const price3 = 99.95;
+        const price4 = 350.89;
+        const item1Input = document.getElementById("item1");
+        const item2Input = document.getElementById("item2");
+        const item3Input = document.getElementById("item3");
+        const item4Input = document.getElementById("item4");
+        const checkButton = document.getElementById("check");
+        const printoutDiv = document.getElementById("printout");
+        let grandTotal
+
+        checkButton.addEventListener('click', () => {
+            let total1 = (item1Input.value * price1)
+            let total2 = (item2Input.value * price2);
+            let total3 = (item3Input.value * price3);
+            let total4 = (item4Input.value * price4);
+
+            let total = total1 + total2 + total3 + total4;
+
+            if(total < 1000) {
+                grandTotal = (total*0.06) + 200;
+            }
+            else if(total >= 1000 && total < 3000) {
+                grandTotal = (total*0.08) + 200;
+            }
+            else {
+                grandTotal = (total*0.1) + 200;
+            }
+            printoutDiv.textContent = "Your salary is "+grandTotal;
+        });
+
+    </script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <style>
+        body{
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+        .form-control{
+            width: 40%;
+        }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label>Firstname:</label><br>
+            <input type="text" id="fname" class="form-control"><br>
+            <label>Lastname:</label><br>
+            <input type="text" id="lname" class="form-control"><br>
+            <label>Comment:</label><br>
+            <textarea name="comment" id="comm" cols="30" rows="4" class="form-control"></textarea><br>
+            <input type="button" value="submit" onclick="details()">
+            <div id="alert"></div>
+        </form>
+
+        <script>
+        let Comment = [];
+        function details(){
+            document.getElementById("alert").innerHTML ="";
+            let Firstname = document.getElementById("fname").value;
+            let Lastname = document.getElementById("lname").value;
+            let comment =document.getElementById("comm").value;
+
+            Comment.push({
+                fname:Firstname,
+                lname:Lastname,
+                comm:comment
+            });
+            for (let i in Comment){
+                document.getElementById("alert").innerHTML += Comment[i].fname +" " + Comment[i].lname + ":" + Comment[i].comm + "</br>";
+            }
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("comm").value = "";
+        }
+        </script>
+    </body>
+</html>

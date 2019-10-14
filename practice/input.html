@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <style>
+        body{
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+        .form-control{
+            width: 40%;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="shower"></div>
+        <div id="save"></div>
+    </body>
+    <script>
+        //document.getElementById("shower").innerHTML = "<button class = 'btn btn-primary'>Coolest</button>"
+        const shower = document.getElementById("shower");
+        var number = prompt("please enter number")
+        for(  i=1; i<=number; i++){
+            shower.innerHTML +="person" + " " + i + " :<input type = 'text' class = 'form-control'><br>"
+             + "</br>";
+        }
+        save.innerHTML += "<button class = 'btn btn-primary'>save</button>";
+    
+                
+        
+    </script>
+</html>

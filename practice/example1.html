@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div id="display">
+
+        </div>
+    <script>
+        const display = document.getElementById("display");
+        for(let i=1; i <= 7; i++) {
+            //console.log("#");
+            for(let j=1; j <=i; j++) {
+                display.innerHTML += "#";
+                //display.innerHTML += i+"<br/>";
+            }
+            display.innerHTML += "<br/>";
+        }
+    </script>
+    </body>
+</html>
+
