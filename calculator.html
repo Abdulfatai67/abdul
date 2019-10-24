@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <style>
+        body{
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+       
+        #delete{
+            margin-left: 10%;
+        }
+        .btn-default{
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+        #display {
+            background-color:white;
+            direction: rtl;
+        }
+
+        </style>
+        </head>
+        <body>
+            <div class="row" >
+                <div class="col-md-4">
+                    <div style= " height: 450px; width: 80%; border: 1px solid white; background-color:rgba(201, 197, 197, 0.884)";>
+                      <h1 style="margin-left: 20%; margin-top: 5%; color: darkslateblue;">Calculator</h1>
+                      <input type="text" id="display" value="" class="form-control" disabled><br>
+                      <button id="delete" class="btn btn-danger btn-small">DEL</button><br>
+                      <button  id="one" class="btn btn-default btn-lg">1</button>
+                      <button  id="two" class="btn btn-default btn-lg">2</button>
+                      <button  id="three" class="btn btn-default btn-lg">3</button>
+                      <button  id="add" class="btn btn-default btn-lg">+</button>
+                      <br>
+                      <button  id="four" class="btn btn-default btn-lg">4</button>
+                      <button  id="five" class="btn btn-default btn-lg">5</button>
+                      <button  id="six" class="btn btn-default btn-lg">6</button>
+                      <button  id="divide" class="btn btn-default btn-lg">÷</button>
+                      <br>
+                      <button  id="seven" class="btn btn-default btn-lg">7</button>
+                      <button  id="eight" class="btn btn-default btn-lg">8</button>
+                      <button  id="nine" class="btn btn-default btn-lg">9</button>
+                      <button  id="multiply" class="btn btn-default btn-lg">*</button>
+                      <br>
+                      <button  id="dot" class="btn btn-default btn-lg" >.</button>
+                      <button  id="zero" class="btn btn-default btn-lg">0</button>
+                      <button  id="minus" class="btn btn-default btn-lg">-</button>
+                      <button  id="equal" class="btn btn-default btn-lg">=</button>
+                      <br>
+                </div>
+
+                <script>
+                
+                const del = document.getElementById("delete");
+                const btn1 = document.getElementById("one");
+                const display = document.getElementById("display");
+                const sum = document.getElementById("add");
+                const subtract = document.getElementById("minus");
+                const division = document.getElementById("divide");
+                const multiply = document.getElementById("multiply");
+                const equals = document.getElementById("equal");
+                let operator = "";
+                let num1 = 0;
+                let num2 = 0;
+
+                sum.addEventListener("click", () => {
+                    num1 = display.value;
+                    operator = "add";
+                    display.value="";
+                });
+
+                equals.addEventListener("click", () => {
+                    num2 = display.value;
+                    if (operator === "add"){
+                        let result = +num1 + +num2;
+                       // return result;
+                       console.log(result);
+                       display.value="";
+                    }
+                })
+                subtract.addEventListener("click", () => {
+                    num1 = display.value;
+                    operator = "minus";
+                    display.value="";
+                });
+
+                equals.addEventListener("click", () => {
+                    num2 = display.value;
+                    if (operator === "minus"){
+                        let result = +num1 - +num2;
+                       // return result;
+                       console.log(result);
+                       display.value="";
+                    }
+                })
+                division.addEventListener("click", () => {
+                    num1 = display.value;
+                    operator = "divide";
+                    display.value="";
+                });
+
+                equals.addEventListener("click", () => {
+                    num2 = display.value;
+                    if (operator === "divide"){
+                        let result = +num1 / +num2;
+                       // return result;
+                       console.log(result);
+                       display.value="";
+                    }
+                })
+                multiply.addEventListener("click", () => {
+                    num1 = display.value;
+                    operator = "multiply";
+                    display.value="";
+                });
+
+                equals.addEventListener("click", () => {
+                    num2 = display.value;
+                    if (operator === "multiply"){
+                        let result = +num1 * +num2;
+                       // return result;
+                       console.log(result);
+                       display.value="";
+                    }
+                })
+
+                btn1.addEventListener("click", () => {
+                    display.value += 1;
+                    })
+                    const btn2 = document.getElementById("two");
+                    btn2.addEventListener("click", () => {
+                        display.value += 2;
+                    
+                }) 
+                const btn3 = document.getElementById("three");
+                    btn3.addEventListener("click", () => {
+                        display.value += 3;
+                    
+                }) 
+                const btn4 = document.getElementById("four");
+                    btn4.addEventListener("click", () => {
+                        display.value += 4;
+                    
+                }) 
+                const btn5 = document.getElementById("five");
+                    btn5.addEventListener("click", () => {
+                        display.value += 5;
+                    
+                }) 
+                const btn6 = document.getElementById("six");
+                    btn6.addEventListener("click", () => {
+                        display.value += 6;
+                    
+                }) 
+                const btn7 = document.getElementById("seven");
+                    btn7.addEventListener("click", () => {
+                        display.value += 7;
+                    
+                }) 
+                const btn8 = document.getElementById("eight");
+                    btn8.addEventListener("click", () => {
+                        display.value += 8;
+                    
+                }) 
+                const btn9 = document.getElementById("nine");
+                    btn9.addEventListener("click", () => {
+                        display.value += 9;
+                    
+                }) 
+                const btn0 = document.getElementById("zero");
+                    btn0.addEventListener("click", () => {
+                        display.value += 0;
+                    
+                }) 
+                const btndot = document.getElementById("dot");
+                    btndot.addEventListener("click", () => {
+                        display.value += '.';
+                    
+                }) 
+
+                del.addEventListener("click", function() {
+                    let cval = display.value;
+                    display.value = cval.substr(0, cval.lenght-1);
+                    console.log(cval);
+                    console.log(cval.lenght);
+                });
+            </script>
+        </body>
+        </html>

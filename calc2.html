@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <style>
+        body {
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+        </style>
+        </head>
+        <body>
+            <form name="Calculator">
+                <label>value1:</label><br>
+                <input type="text" id="value1"><br>
+                <label>value2:</label><br>
+                <input type="text" id="value2"><br>
+                <select id="operator">
+                    <option value="add">Add</option>
+                    <option value="div">Divide</option>
+                    <option value="sub">Subtract</option>
+                    <option value="mul">Multiply</option>
+                </select>
+                <button type="button" onclick="calc()">Calculate</button>
+                <div id="display"></div>
+
+            </form>
+
+            <script>
+            function calc(){
+                var a = parseInt(document.querySelector("#value1").value);
+                var b = parseInt(document.querySelector("#value2").value);
+                var op = document.querySelector("#operator").value;
+
+                var Calculate
+
+                if (op == "add"){
+                    Calculate = a + b;
+                }
+                else if (op == "sub"){
+                    Calculate = a - b;
+                }
+                else if (op == "mul"){
+                    Calculate = a * b;
+                }
+                  else if (op == "div"){
+                    Calculate = a / b;
+            }
+            console.log(Calculate);
+        }
+            
+            </script>
+        </body>
+        </html>
